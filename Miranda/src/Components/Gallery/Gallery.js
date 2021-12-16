@@ -11,15 +11,15 @@ import headerDecorator from '../../assets/home/header_decorator.png';
 import Tabs from './Tab';
 
 // gallery Photos
-import gallery01 from '../../assets/gallery/gallery01.jpg';
-import gallery02 from '../../assets/gallery/gallery02.jpg';
-import gallery03 from '../../assets/gallery/gallery03.jpg';
-import gallery04 from '../../assets/gallery/gallery04.jpg';
-import gallery05 from '../../assets/gallery/gallery05.jpg';
-import gallery06 from '../../assets/gallery/gallery06.jpg';
-import gallery07 from '../../assets/gallery/gallery07.jpg';
-import gallery08 from '../../assets/gallery/gallery08.jpg';
-import gallery09 from '../../assets/gallery/gallery09.jpg';
+import gallery01 from '../../assets/gallery/img1.jpg';
+import gallery02 from '../../assets/gallery/img2.jpg';
+import gallery03 from '../../assets/gallery/img3.jpg';
+import gallery04 from '../../assets/gallery/img4.jpg';
+import gallery05 from '../../assets/gallery/img5.jpg';
+import gallery06 from '../../assets/gallery/img6.jpg';
+import gallery07 from '../../assets/gallery/img7.jpg';
+import gallery08 from '../../assets/gallery/img8.jpg';
+import gallery09 from '../../assets/gallery/img9.jpg';
 
 const GalleryWrapper = styled.section`
     background: #141313;
@@ -68,15 +68,15 @@ const GalleryWrapper = styled.section`
 `
 
 const images = [
-  { id: 1, src: gallery01 },
+  { id: 1, src: gallery05 },
   { id: 2, src: gallery02 },
   { id: 3, src: gallery03 },
-  { id: 4, src: gallery04 },
-  { id: 5, src: gallery05 },
-  { id: 6, src: gallery06 },
-  { id: 7, src: gallery07 },
-  { id: 8, src: gallery08 },
-  { id: 9, src: gallery09 },
+  { id: 4, src: gallery05 },
+  { id: 5, src: gallery08 },
+  { id: 6, src: gallery07 },
+  // { id: 7, src: gallery06 },
+  // { id: 8, src: gallery04 },
+  // { id: 9, src: gallery01 },
 ]
 
 

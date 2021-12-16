@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import about01 from '../../assets/home/abt5.jpg'
-import about02 from '../../assets/home/abt3.jpg'
-import about03 from '../../assets/home/abt4.jpg'
-
-
+import about01 from '../../assets/home/img2.jpg'
+import about02 from '../../assets/home/img3.jpg'
+import about03 from '../../assets/home/img5.jpg'
 
 const AboutCarouselWrapper = styled.div`
    .slide {

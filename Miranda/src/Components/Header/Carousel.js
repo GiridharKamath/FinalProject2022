@@ -5,9 +5,9 @@ import sideSeparator from "../../assets/home/side-separator.png";
 import { device } from "../../Theme/MediaQueries";
 
 //slider images
-import image01 from "../../assets/homecarousel/h1.jpg";
-import image02 from "../../assets/homecarousel/h4.jpg";
-import image03 from "../../assets/homecarousel/h5.jpg";
+import image01 from "../../assets/homecarousel/img7.jpg";
+import image02 from "../../assets/homecarousel/img8.jpg";
+import image03 from "../../assets/homecarousel/img9.jpg";
 
 const HeaderMainStyle = styled.section`
   @import url("https://fonts.googleapis.com/css?family=Oswald:200&subset=cyrillic");
