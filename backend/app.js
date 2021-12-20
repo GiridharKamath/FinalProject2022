@@ -1,4 +1,5 @@
 require("dotenv").config();
+const userRouter = require('./controllers/userController')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -24,6 +25,10 @@ mongoose
 app.get('/', (req, res) => {
   res.send('Ho World!')
 })
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/', userRouter)
 
 app.use(morgan("dev"))
 
