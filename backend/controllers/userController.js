@@ -3,7 +3,7 @@ const userService = require('../services/userService')
 const router = express.Router()
 const bodyParser = require("body-parser"); //convert json file to normal texts
 router.use(bodyParser.json())
-router.get("/user/getAll",async(req,res)=>{
+router.get("/allUsers",async(req,res)=>{
     try{
         let user = await userService.fetchUser({});
         res.send(user)  
@@ -13,7 +13,7 @@ router.get("/user/getAll",async(req,res)=>{
     }
 })
 
-router.post("/user/addUser", async(req,res)=>{
+router.post("/addUser", async(req,res)=>{
     try{
         console.log(req.body)
         let newUser1 = {

@@ -128,7 +128,7 @@ class MainMenu extends Component {
     return (
       <MainMenuWrapper>
         {/* Steaks */}
-        <div className="wrapper">
+        {/*<div className="wrapper">
           <div className="main__menu__content">
             <h2>Steaks</h2>
             <p>Exclusive and delicious beef</p>
@@ -148,7 +148,7 @@ class MainMenu extends Component {
           </div>
         </div>
 
-        {/* Salads */}
+        {/* Salads */}{/*
         <div className="wrapper">
           <div className="main__menu__content">
             <h2>Salads</h2>
@@ -172,7 +172,7 @@ class MainMenu extends Component {
 
 
 
-        {/* Desserts */}
+        {/* Desserts */}{/*
         <div className="wrapper">
           <div className="main__menu__content">
             <h2>Desserts</h2>
@@ -195,7 +195,7 @@ class MainMenu extends Component {
 
         <div className="main__menu__ornament">
           <img src={ornament} alt="ornament" />
-        </div>
+        </div>*/}
       </MainMenuWrapper>
     );
   }

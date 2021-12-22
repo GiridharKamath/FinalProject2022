@@ -1,4 +1,4 @@
-const userSchema = require('../models/userModel')
+// const userSchema = require('../models/userModel')
 
 const userDAO = require('../DAO/userDAO')
 

@@ -1,5 +1,6 @@
 require("dotenv").config();
 const userRouter = require('./controllers/userController')
+const menuItemRouter = require('./controllers/menuItemController')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -28,7 +29,8 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', userRouter)
+app.use('/user', userRouter)
+app.use('/menu', menuItemRouter)
 
 app.use(morgan("dev"))
 
