@@ -12,6 +12,16 @@ exports.fetchAllMenuItems = async function(){
     }
 }
 
+exports.fetchItemById = async function(id){
+    try{
+        let item = await menuItemDAO.fetchItemById(id);
+        return item
+    }
+    catch(e){
+        console.error(`cannot view the item ${e}`);
+    }
+}
+
 exports.addMenuItem = async function(menuItem){
     try{
         // let newUser = {
@@ -29,3 +39,32 @@ exports.addMenuItem = async function(menuItem){
     }
 }
 
+exports.removeAvailable = async function (itemId) {
+    try {
+      let removeA = await menuItemDAO.removeAvailable(itemId);
+      return removeA;
+    } 
+    catch (e) {
+      console.error(`cannot delete the item ${e}`);
+    }
+};
+
+exports.makeAvailable = async function (itemId) {
+    try {
+      let makeA = await menuItemDAO.makeAvailable(itemId);
+      return makeA;
+    } 
+    catch (e) {
+      console.error(`cannot delete the item ${e}`);
+    }
+};
+
+exports.updateItem = async (itemId, item) => {
+    try {
+        let itemm = await menuItemDAO.updateItem(itemId, item);
+        return itemm
+    } 
+    catch (e) {
+      console.error(`cannot update the menuItem ${e}`);
+    }
+};

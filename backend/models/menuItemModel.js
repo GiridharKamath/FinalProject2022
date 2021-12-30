@@ -8,10 +8,22 @@ const menuItemSchema = new Schema({
     },
     itemPrice:{
         type:Number,
-        required:true
+        required:true   
     },
     itemDescription:{
         type:String,
+        required:true
+    },
+    isItemAvailable: {
+        type: Boolean,
+        default: true,
+    },
+    itemReview:{
+        type: String,
+        required:false
+    },
+    itemCategory:{
+        type: String,
         required:true
     }
 })

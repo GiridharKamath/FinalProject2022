@@ -10,6 +10,16 @@ exports.fetchAllMenuItems = async function(){
     }
 }
 
+exports.fetchItemById = async function (id) {
+    try {
+      let item = await menuItemSchema.findById(id);
+      return item
+    } 
+    catch (e) {
+      console.error(`cannot view the menuItem ${e}`)
+    }
+};
+
 exports.addMenuItem = async function(menuItem){
     try{
         let addedMenuItem = await menuItemSchema.create(menuItem);
@@ -20,3 +30,38 @@ exports.addMenuItem = async function(menuItem){
     }
 }
 
+exports.removeAvailable = async function (id) {
+    try {
+      let item = await menuItemSchema.findById(id);
+      let removeA = await item.updateOne({ isItemAvailable: false });
+      return removeA;
+    }
+    catch (e) {
+      console.error(`cannot remove the menuItem ${e}`);
+    }
+};
+
+exports.makeAvailable = async function (id) {
+  try {
+    let item = await menuItemSchema.findById(id);
+    let makeA = await item.updateOne({ isItemAvailable: true });
+    return makeA;
+  }
+  catch (e) {
+    console.error(`cannot remove the menuItem ${e}`);
+  }
+};
+
+exports.updateItem = async (itemId, item) => {
+    try {
+      let itemObj = await menuItemSchema.findByIdAndUpdate(
+        itemId,
+        { $set: item },
+        { new: true }
+      );
+      return itemObj.save();
+    } 
+    catch (e) {
+      console.error(`cannot update the menuItem ${e}`);
+    }
+};
