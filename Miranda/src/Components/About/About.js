@@ -129,7 +129,7 @@ class AboutUs extends Component {
             </div>
 
             {/* Wrapper ends here */}
-            <Button>ajj</Button>
+            
           </div>
         </AboutUsWrapper>
       </React.Fragment>
