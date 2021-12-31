@@ -94,6 +94,7 @@ const AboutUsWrapper = styled.section`
 class AboutUs extends Component {
   render() {
     return (
+      <Button>ajj</Button
       <React.Fragment>
         {/* // About US */}
         <AboutUsWrapper id="about" >
