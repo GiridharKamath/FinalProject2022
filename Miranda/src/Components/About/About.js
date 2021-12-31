@@ -97,7 +97,7 @@ class AboutUs extends Component {
       <React.Fragment>
         {/* // About US */}
         <AboutUsWrapper id="about" >
-          <h2 className="about__title">About Us</h2>
+          <h2 className="about__title">About s</h2>
           <p className="about__subtitle">
             We love restaurants as much as you do. That’s why we’ve been <br />
             helping them fill tables since 1999. Welcome to elixir restaurant</p>
