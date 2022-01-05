@@ -18,12 +18,6 @@ const App = () => {
                     <Cart />
                 </div>
             </div>
-
-            <footer>
-                <small>
-                    made by <a href="https://twitter.com/krzysu">Kris Urbas</a>, source code available on <a href="https://github.com/krzysu/reactjs-shopping-cart">github</a>
-                </small>
-            </footer>
         </div>
     );
 }
