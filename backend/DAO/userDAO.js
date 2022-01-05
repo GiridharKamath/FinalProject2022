@@ -3,6 +3,7 @@ const userSchema = require('../models/userModel')
 exports.fetchUser = async function(filter){
     try{
         let user = await userSchema.find(filter);
+        // console.log(user)
         return user
     }
     catch(e){

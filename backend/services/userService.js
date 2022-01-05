@@ -29,3 +29,14 @@ exports.addUser = async function(user){
     }
 }
 
+exports.validateLogin = async (userName,password)=>{
+    try{
+        let user = await userDAO.fetchUser({userName:userName,userPassword:password})
+        if(user.length <= 0){
+            return {success: false,msg: "Invalid credentials"}
+        }
+        return {success: true,user: user[0]}
+    }catch(e){
+        return {success:false,msg: e}
+    }
+}

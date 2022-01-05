@@ -24,7 +24,7 @@ router.route("/signup")
             }
             let newUser = await userService.addUser(newUser1)
             // console.log(newUser)
-            res.redirect("/menu/allMenuItems")
+            res.redirect("/user/login")
             // if (newUser.success) {
             //     res.statusCode = 200;
             //     res.setHeader("Content-type", "text/html");
@@ -47,17 +47,23 @@ router
     .get((req, res) => {
         res.send("welcome to login page");
     })
-    .post((req, res) => {
+    .post (async (req, res) => {
         try {
-            if (req.body.username == "" || req.body.password == "" || req.body.email == "") {
+            if (req.body.username == "" || req.body.userPassword == "") {
                 let url = "/user" + req.url;
                 res.redirect(url);
             }else{
-                if (user.isAdmin) {
-                    res.redirect("/menu/allMenuItems");
-                  } else {
-                    res.redirect("/menu/allMenuItems");
-                  }
+                let user = await userService.validateLogin(req.body.userName,req.body.userPassword)
+                if(!user.success){
+                    res.json({user})
+                }
+                else{
+                    if (user.user.isAdmin) {
+                        res.redirect("/home/adminDashboard");
+                      } else {
+                        res.redirect("/menu/allMenuItems");
+                      }
+                }
             }
         } catch (e) {
             res.statusCode = 500;
