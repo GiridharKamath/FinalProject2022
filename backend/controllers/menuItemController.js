@@ -6,8 +6,8 @@ router.use(bodyParser.json())
 
 router.get("/allMenuItems", async (req, res) => {
     try {
-        let menuItem = await menuItemService.fetchAllMenuItems();
-        res.send(menuItem)
+        let menuItem = await menuItemService.fetchAllMenuItems(req.query);
+        res.json({msg:"Menu Items",menuItem});
     }
     catch (e) {
         console.log("Invalid Input")

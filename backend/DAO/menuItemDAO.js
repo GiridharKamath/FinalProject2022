@@ -1,8 +1,8 @@
 const menuItemSchema = require('../models/menuItemModel')
 
-exports.fetchAllMenuItems = async function(){
+exports.fetchAllMenuItems = async function(filter){
     try{
-        let allMenuItems = await menuItemSchema.find();
+        let allMenuItems = await menuItemSchema.find(filter);
         return allMenuItems
     }
     catch(e){

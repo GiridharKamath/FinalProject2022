@@ -2,9 +2,9 @@
 
 const menuItemDAO = require('../DAO/menuItemDAO')
 
-exports.fetchAllMenuItems = async function(){
+exports.fetchAllMenuItems = async function(filter){
     try{
-        let menuItem = await menuItemDAO.fetchAllMenuItems();
+        let menuItem = await menuItemDAO.fetchAllMenuItems(filter);
         return menuItem
     }
     catch(e){

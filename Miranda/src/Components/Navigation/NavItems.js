@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const NavItems = ({ className, navClass, toggleHamburger }) => (
   <div className={navClass}>
-    
+
     <NavLink
       to="/"
       exact
@@ -46,6 +46,14 @@ const NavItems = ({ className, navClass, toggleHamburger }) => (
       className="navigation__btn"
       onClick={toggleHamburger}
     >x</span>
+
+    <NavLink
+      to="/loginorsignup"
+      activeClassName="active"
+
+      className={className}
+    >Login/SignUp</NavLink>
+
   </div>
 )
 NavItems.propTypes = {
