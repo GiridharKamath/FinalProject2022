@@ -117,7 +117,7 @@ const Contact = (props) => {
     <ContactWrapper>
       <div className="wrapper">
         <MainSubTitle>Contact</MainSubTitle>
-        <p className="contact__subtitle">W325 State Road 123 Mondovi, WI (Wisconsin) 98746-54321</p>
+        <p className="contact__subtitle">MAIN ROAD KARKALA-574104</p>
 
         <form>
           <div className="form__item form__item01">
